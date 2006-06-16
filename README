@@ -1,0 +1,110 @@
+cdrdao & gcdmaster
+-------------------------------------------
+cdrdao creates audio and data CD-Rs in disk-at-once (DAO) mode driven
+by a description file called toc-file.  In DAO mode it is possible to
+create non standard track pre-gaps that have other lengths than 2 sec-
+onds and contain nonzero audio data.  This is for example useful to
+divide live recordings into tracks where 2 second gaps would be kind
+of irritating.
+
+gcdmaster is a GNOMEmm frontend to cdrdao and its utilties.
+
+Runtime requirements:
+  cygwin-1.5.20-1 (20060604)
+  libao2-0.8.6-1
+  libmad-0.15.1b-2
+  libmp3lame0-3.96.1-1
+  libogg0-1.1.2-1
+  libvorbisfile3-1.1.1-1
+
+Additional GCDMaster runtime requirements:
+
+Build requirements:
+  cygwin-1.5.20-1 (20060604)
+  autoconf2.5-2.59-2
+  automake1.9-1.9.6-1
+  binutils-20050610-1
+  cygport-0.2.1-1
+  gawk-3.1.5-2
+  gcc-core-3.4.4-1
+  gcc-g++-3.4.4-1
+  make-3.80-1
+  pkg-config-0.20-1
+  sed-4.1.4-1
+
+Canonical homepage:
+  http://cdrdao.sourceforge.net/
+
+Canonical download:
+  http://prdownloads.sourceforge.net/cdrdao/
+
+-------------------------------------------
+
+Build instructions:
+  unpack cdrdao-1.2.1-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./cdrdao-1.2.1-X.cygport all
+
+This will create:
+  /usr/src/cdrdao-1.2.1-X-src.tar.bz2
+  /usr/src/cdrdao-1.2.1-X.tar.bz2
+  /usr/src/gcdmaster-1.2.1-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the cdrdao binary package:
+
+  /usr/bin/cdrdao.exe
+  /usr/bin/cue2toc.exe
+  /usr/bin/toc2cddb.exe
+  /usr/bin/toc2cue.exe
+  /usr/bin/toc2mp3.exe
+  /usr/share/cdrdao/drivers
+  /usr/share/doc/Cygwin/cdrdao-1.2.1.README
+  /usr/share/doc/cdrdao-1.2.1/AUTHORS
+  /usr/share/doc/cdrdao-1.2.1/COPYING
+  /usr/share/doc/cdrdao-1.2.1/CREDITS
+  /usr/share/doc/cdrdao-1.2.1/ChangeLog
+  /usr/share/doc/cdrdao-1.2.1/INSTALL
+  /usr/share/doc/cdrdao-1.2.1/README
+  /usr/share/doc/cdrdao-1.2.1/README.PlexDAE
+  /usr/share/doc/cdrdao-1.2.1/README.Win32
+  /usr/share/man/man1/cdrdao.1.gz
+  /usr/share/man/man1/cue2toc.1.gz
+
+Files included in the gcdmaster package:
+
+  /etc/postinstall/cdrdao.sh
+  /usr/bin/gcdmaster.exe
+  /usr/share/application-registry/gcdmaster.applications
+  /usr/share/applications/gcdmaster.desktop
+  /usr/share/gcdmaster/glade/ProjectChooser.glade
+  /usr/share/man/man1/gcdmaster.1.gz
+  /usr/share/mime-info/gcdmaster.keys
+  /usr/share/mime-info/gcdmaster.mime
+  /usr/share/mime/packages/gcdmaster.xml
+  /usr/share/pixmaps/gcdmaster-doc.png
+  /usr/share/pixmaps/gcdmaster.png
+
+------------------
+
+Port Notes:
+
+----- version 1.2.1-2 -----
+Fixed packaging error.
+
+----- version 1.2.1-1 -----
+Version bump.
+
+----- version 1.2.0-1 -----
+Version bump, including MAD and OggVorbis support.
+gcdmaster now requires gtkmm24 and libgnomeuimm26.
+
+----- version 1.1.9-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
