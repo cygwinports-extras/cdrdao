@@ -1,0 +1,32 @@
+DESCRIPTION="Records audio or data CD-R in Disk-at-Once mode"
+HOMEPAGE="http://cdrdao.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+
+PKG_NAMES="${PN} gcdmaster"
+PKG_HINTS='setup gnome'
+PKG_CONTENTS[0]='--exclude=gcdmaster* usr/bin/ usr/share/cdrdao/ usr/share/doc/ usr/share/man/'
+PKG_CONTENTS[1]="etc/ usr/bin/gcdmaster.exe usr/share/application* \
+	usr/share/gcdmaster/ usr/share/man/man1/gcdmaster* usr/share/mime* \
+	usr/share/pixmaps/"
+
+DIFF_EXCLUDES="TocParser.cpp"
+
+src_compile() {
+	cd ${S}
+	cygautoreconf
+	lndirs
+
+	cd ${B}
+	cygconf --with-xdao --with-lame --disable-dependency-tracking
+	cygmake
+}
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	doicon ${S}/xdao/stock/gcdmaster.png
+	make_desktop_entry gcdmaster "Gnome CD Master" gcdmaster.png "AudioVideo;DiscBurning"
+
+	dodoc ${S}/README.{PlexDAE,Win32}
+}

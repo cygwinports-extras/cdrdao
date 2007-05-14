@@ -10,67 +10,78 @@ of irritating.
 gcdmaster is a GNOMEmm frontend to cdrdao and its utilties.
 
 Runtime requirements:
-  cygwin-1.5.20-1 (20060604)
+  cygwin-1.5.24-2
   libao2-0.8.6-1
-  libmad-0.15.1b-2
-  libmp3lame0-3.96.1-1
-  libogg0-1.1.2-1
+  libmad-0.15.1b-3
+  libmp3lame0-3.97-1
   libvorbisfile3-1.1.1-1
-
-Additional GCDMaster runtime requirements:
+(gcdmaster)
+  glib2-2.12.11-1
+  glibmm24-2.12.8-1
+  gtk2-x11-2.10.11-1
+  gtkmm24-2.10.9-1
+  libglademm24-2.6.2-1
+  libgnome2-2.16.0-1
+  libgnomemm26-2.16.0-1
+  libgnomeuimm26-2.16.0-1
+  libsigc++20-2.0.17-1
 
 Build requirements:
-  cygwin-1.5.20-1 (20060604)
-  autoconf2.5-2.59-2
-  automake1.9-1.9.6-1
-  binutils-20050610-1
-  cygport-0.2.1-1
-  gawk-3.1.5-2
-  gcc-core-3.4.4-1
-  gcc-g++-3.4.4-1
-  make-3.80-1
-  pkg-config-0.20-1
-  sed-4.1.4-1
+(besides corresponding devel packages)
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  cygport-0.2.11-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  gcc-g++-3.4.4-3
+  make-3.81-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
+  w32api-3.9-1
 
 Canonical homepage:
   http://cdrdao.sourceforge.net/
 
 Canonical download:
-  http://prdownloads.sourceforge.net/cdrdao/
+  http://downloads.sourceforge.net/cdrdao/
 
 -------------------------------------------
 
 Build instructions:
-  unpack cdrdao-1.2.1-X-src.tar.bz2
+  unpack cdrdao-1.2.2-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./cdrdao-1.2.1-X.cygport all
+  cygport ./cdrdao-1.2.2-X.cygport all
 
 This will create:
-  /usr/src/cdrdao-1.2.1-X-src.tar.bz2
-  /usr/src/cdrdao-1.2.1-X.tar.bz2
-  /usr/src/gcdmaster-1.2.1-X.tar.bz2
+  /usr/src/cdrdao-1.2.2-X-src.tar.bz2
+  /usr/src/cdrdao-1.2.2-X.tar.bz2
+  /usr/src/gcdmaster-1.2.2-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the cdrdao binary package:
 
+  /etc/postinstall/cdrdao.sh
   /usr/bin/cdrdao.exe
   /usr/bin/cue2toc.exe
+  /usr/bin/gcdmaster.exe
   /usr/bin/toc2cddb.exe
   /usr/bin/toc2cue.exe
   /usr/bin/toc2mp3.exe
   /usr/share/cdrdao/drivers
-  /usr/share/doc/Cygwin/cdrdao-1.2.1.README
-  /usr/share/doc/cdrdao-1.2.1/AUTHORS
-  /usr/share/doc/cdrdao-1.2.1/COPYING
-  /usr/share/doc/cdrdao-1.2.1/CREDITS
-  /usr/share/doc/cdrdao-1.2.1/ChangeLog
-  /usr/share/doc/cdrdao-1.2.1/INSTALL
-  /usr/share/doc/cdrdao-1.2.1/README
-  /usr/share/doc/cdrdao-1.2.1/README.PlexDAE
-  /usr/share/doc/cdrdao-1.2.1/README.Win32
+  /usr/share/doc/Cygwin/cdrdao-1.2.2.README
+  /usr/share/doc/cdrdao-1.2.2/AUTHORS
+  /usr/share/doc/cdrdao-1.2.2/COPYING
+  /usr/share/doc/cdrdao-1.2.2/CREDITS
+  /usr/share/doc/cdrdao-1.2.2/ChangeLog
+  /usr/share/doc/cdrdao-1.2.2/INSTALL
+  /usr/share/doc/cdrdao-1.2.2/README
+  /usr/share/doc/cdrdao-1.2.2/README.PlexDAE
+  /usr/share/doc/cdrdao-1.2.2/README.Win32
   /usr/share/man/man1/cdrdao.1.gz
   /usr/share/man/man1/cue2toc.1.gz
 
@@ -91,6 +102,9 @@ Files included in the gcdmaster package:
 ------------------
 
 Port Notes:
+
+----- version 1.2.2-1 -----
+Version bump.
 
 ----- version 1.2.1-2 -----
 Fixed packaging error.
