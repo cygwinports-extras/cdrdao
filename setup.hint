@@ -1,5 +1,5 @@
 category: Audio
-requires: cygwin libao2 libmad libmp3lame0 libvorbisfile3
+requires: libao2 libmad libmp3lame0 libvorbisfile3
 sdesc: "Creates audio and data CD-Rs in disk-at-once mode (CLI)"
 ldesc: "cdrdao creates audio and data CD-Rs in disk-at-once (DAO) mode driven
 by a description file called toc-file.  In DAO mode it is possible to
